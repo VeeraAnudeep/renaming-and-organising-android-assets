@@ -6,7 +6,6 @@ find -name "* *" -type f | rename 's/ /_/g'
 rename 'y/A-Z/a-z/' *
 # Make respective Density directories 
 mkdir drawable-xxhdpi; mkdir drawable-xhdpi; mkdir drawable-hdpi; mkdir drawable-mdpi
-done
 # To move to respective density directories 
 for file in $(find . -type f -iname '*@xxhdpi*'); do
   mv "$file" "drawable-xxhdpi/${file/@xxhdpi/}"
